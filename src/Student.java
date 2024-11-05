@@ -8,7 +8,8 @@ public class Student {
     public Student(String name, int age, double gpa) {
         this.name = name;
         this.age = age;
-        this.gpa = gpa;
+        setGpa(gpa);
+
     }
 
     //getters
@@ -50,6 +51,7 @@ public class Student {
     public void setGpa(double gpa) {
 
         if ( gpa < 0.0 || gpa > 4.0){
+            this.gpa = 0.0;
             System.out.println("GPA out of range !!");
         }
 
